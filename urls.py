@@ -1,0 +1,21 @@
+from django.contrib import admin
+from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from rawvelyapp import views
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+
+    path('', views.inicio, name='inicio'),
+
+    path('login/', views.login, name='login'),
+
+    path('cadastro/', views.cadastro, name='cadastro'),
+]
+
+urlpatterns += static(
+    settings.MEDIA_URL,
+    document_root=settings.MEDIA_ROOT
+)
