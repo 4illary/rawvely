@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.inicio {
+    min-height: 100vh;
+    width: 100%;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            #76040b 0%,
+            #68050b 22%,
+            #52050b 40%,
+            #280b18 57%,
+            #071326 78%,
+            #031027 100%
+        );
+}
+
+.conteudo {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 500px;
+
+    text-align: center;
+}
+
+.logo {
+    width: 280px;
+    height: auto;
+
+    display: block;
+
+    margin-bottom: 20px;
+}
+
+.frase {
+    color: rgba(255, 255, 255, 0.92);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    letter-spacing: 0.08em;
+
+    margin-bottom: 12px;
+}
+
+.descricao {
+    max-width: 430px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+.botao-explorar {
+    display: inline-block;
+
+    padding: 12px 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.30);
+
+    border-radius: 6px;
+
+    background: rgba(0, 0, 0, 0.12);
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.botao-explorar:hover {
+    background: rgba(255, 255, 255, 0.08);
+
+    border-color: rgba(255, 255, 255, 0.50);
+
+    transform: translateY(-2px);
+}
+
+.botao-login {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    z-index: 10;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    border-radius: 5px;
+
+    background: rgba(0, 0, 0, 0.10);
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    text-decoration: none;
+}
+
+.capas-laterais {
+    position: absolute;
+
+    right: -20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    width: 60vw;
+    max-width: 750px;
+
+    height: 90vh;
+
+    opacity: 0.30;
+
+    pointer-events: none;
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 25%,
+        black 80%,
+        transparent 100%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 25%,
+        black 80%,
+        transparent 100%
+    );
+}
+
+.capas-laterais img {
+    width: 100%;
+
+    aspect-ratio: 2 / 3;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    opacity: 0.75;
+
+    filter:
+        saturate(0.75)
+        brightness(0.70);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
